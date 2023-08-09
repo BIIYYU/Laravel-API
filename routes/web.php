@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('buku',[C_buku::class,'index']);
+Route::post('buku',[C_buku::class,'store']);
+Route::get('buku/{id}',[C_buku::class,'edit']);
+Route::put('buku/{id}',[C_buku::class,'update']);
+Route::delete('buku/{id}',[C_buku::class,'destroy']);
+
+// Route::apiResource('buku',C_buku::class);
